@@ -5,8 +5,6 @@ book:
   title: "graphs"
   author: "Jane Doe"
   date: "5/26/2023"
-  site-url: https://jtr13.github.io/graphs
-  repo-url: https://github.com/jtr13/graphs
   repo-branch: main
   repo-actions: [edit, issue]
   chapters:
