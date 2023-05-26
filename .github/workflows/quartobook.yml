@@ -20,9 +20,6 @@ jobs:
       - name: setup R
         uses: r-lib/actions/setup-r@v2
 
-      - name: fix apt
-        run: sudo apt update -y
-
       - name: setup dependencies
         uses: r-lib/actions/setup-r-dependencies@v2
 
