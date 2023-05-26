@@ -2,7 +2,7 @@ project:
   type: book
 
 book:
-  title: "graphs"
+  title: "this is a test"
   author: "Jane Doe"
   date: "5/26/2023"
   repo-branch: main
