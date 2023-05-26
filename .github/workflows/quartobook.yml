@@ -51,7 +51,8 @@ jobs:
          name: _book # optional
          # Destination path
          path: _book/ # optional
-
+# need to run quarto publish gh-pages once locally 
+# see: https://github.com/quarto-dev/quarto-actions/tree/main/publish#github-pages
      - name: Deploy 🚀
        uses: quarto-dev/quarto-actions/publish@v2
        with:
