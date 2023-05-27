@@ -24,3 +24,22 @@ To learn more about Quarto books visit <https://quarto.org/docs/books>.
   </div>
  </div> 
   
+::: callout-note
+Note
+:::
+
+::: callout-tip
+Tip
+:::
+
+::: callout-caution
+Caution
+:::
+
+::: callout-warning
+Warning
+:::
+
+::: callout-important
+Important
+:::
