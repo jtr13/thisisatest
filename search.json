@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "this is a test",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2\n\n\n\n\nHeader\n\n\n&lt;h4 class=\"card-title\"&gt;Primary card title&lt;/h4&gt;\n&lt;p class=\"card-text\"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;\n\n\n\n\nHeader\n\n\n&lt;h4 class=\"card-title\"&gt;Secondary card title&lt;/h4&gt;\n&lt;p class=\"card-text\"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;"
+    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2\n\n\n\n\nHeader\n\n\n&lt;h4 class=\"card-title\"&gt;Primary card title&lt;/h4&gt;\n&lt;p class=\"card-text\"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;\n\n\n\n\nHeader\n\n\n&lt;h4 class=\"card-title\"&gt;Secondary card title&lt;/h4&gt;\n&lt;p class=\"card-text\"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;\n\n\n\n\n\n\n\n\nNote\n\n\n\nNote\n\n\n\n\n\n\n\n\nTip\n\n\n\nTip\n\n\n\n\n\n\n\n\nCaution\n\n\n\nCaution\n\n\n\n\n\n\n\n\nWarning\n\n\n\nWarning\n\n\n\n\n\n\n\n\nImportant\n\n\n\nImportant"
   },
   {
     "objectID": "intro.html",
