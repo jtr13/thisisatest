@@ -5,8 +5,8 @@ book:
   title: "this is a test"
   author: "Jane Doe"
   date: "5/26/2023"
-  navbar:
-    background: danger
+  #navbar:
+   # background: danger
   
   site-url: https://jtr13.github.io/thisisatest
   repo-url: https://github.com/jtr13/thisisatest
@@ -23,7 +23,7 @@ bibliography: references.bib
 
 format:
   html:
-    theme: minty
+    theme: sketchy
     code-link: true
 
 editor: visual
