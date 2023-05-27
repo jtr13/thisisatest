@@ -1,6 +1,8 @@
 project:
   type: book
 
+highlight-style: oblivion
+
 book:
   title: "this is a test"
   author: "Jane Doe"
