@@ -9,7 +9,7 @@ book:
   site-url: https://jtr13.github.io/thisisatest
   repo-url: https://github.com/jtr13/thisisatest
   repo-branch: main
-  repo-actions: [edit, issue]
+  repo-actions: [source, edit, issue]
 
   chapters:
     - index.qmd
