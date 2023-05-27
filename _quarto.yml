@@ -23,7 +23,8 @@ bibliography: references.bib
 
 format:
   html:
-    theme: sketchy
+    theme: 
+      - minty
     code-link: true
 
 editor: visual
