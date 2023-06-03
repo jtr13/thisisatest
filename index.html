@@ -212,9 +212,59 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This is a Quarto book.</p>
 <p>To learn more about Quarto books visit <a href="https://quarto.org/docs/books" class="uri">https://quarto.org/docs/books</a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(systemfonts)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">system_fonts</span>()</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>df <span class="sc">|&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(family) <span class="sc">|&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>() <span class="sc">|&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<pre><code># A tibble: 24 × 2
+# Groups:   family [24]
+   family                 n
+   &lt;chr&gt;              &lt;int&gt;
+ 1 Lato                  18
+ 2 DejaVu Sans            9
+ 3 C059                   8
+ 4 DejaVu Serif           8
+ 5 Nimbus Mono PS         8
+ 6 Nimbus Roman           8
+ 7 Nimbus Sans            8
+ 8 Nimbus Sans Narrow     8
+ 9 P052                   8
+10 URW Bookman            8
+# ℹ 14 more rows</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 131   9</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 9
+  path                    index name  family style weight width italic monospace
+  &lt;chr&gt;                   &lt;int&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt; &lt;ord&gt;  &lt;ord&gt; &lt;lgl&gt;  &lt;lgl&gt;    
+1 /usr/share/fonts/type1…     0 URWG… URW G… Book… normal norm… FALSE  FALSE    
+2 /usr/share/fonts/truet…     0 Lato… Lato   Thin… ultra… norm… TRUE   FALSE    
+3 /usr/share/fonts/truet…     0 Libe… Liber… Bold  bold   norm… FALSE  FALSE    
+4 /usr/share/fonts/truet…     0 Lato… Lato   Semi… semib… norm… TRUE   FALSE    
+5 /usr/share/fonts/type1…     0 Nimb… Nimbu… Bold… bold   norm… TRUE   TRUE     
+6 /usr/share/fonts/truet…     0 Libe… Liber… Bold  bold   norm… FALSE  TRUE     </code></pre>
 </div>
 </div>
 <div class="card border-primary mb-3" style="max-width: 20rem;">
