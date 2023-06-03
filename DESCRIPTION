@@ -16,6 +16,7 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Imports: 
     ggplot2,
-    rmarkdown
+    rmarkdown,
+    systemfonts
 URL: https://github.com/jtr13/thisisatest
 BugReports: https://github.com/jtr13/thisisatest/issues
