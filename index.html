@@ -234,48 +234,133 @@ Attaching package: 'dplyr'</code></pre>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>() <span class="sc">|&gt;</span></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 24 × 2
-# Groups:   family [24]
-   family                 n
-   &lt;chr&gt;              &lt;int&gt;
- 1 Lato                  18
- 2 DejaVu Sans            9
- 3 C059                   8
- 4 DejaVu Serif           8
- 5 Nimbus Mono PS         8
- 6 Nimbus Roman           8
- 7 Nimbus Sans            8
- 8 Nimbus Sans Narrow     8
- 9 P052                   8
-10 URW Bookman            8
-# ℹ 14 more rows</code></pre>
+<pre><code># A tibble: 186 × 2
+# Groups:   family [186]
+   family                    n
+   &lt;chr&gt;                 &lt;int&gt;
+ 1 Helvetica Neue           14
+ 2 Avenir                   12
+ 3 Avenir Next              12
+ 4 Avenir Next Condensed    12
+ 5 Hiragino Sans            10
+ 6 Skia                     10
+ 7 Apple SD Gothic Neo       9
+ 8 Gill Sans                 9
+ 9 Noto Sans Kannada         9
+10 Noto Sans Myanmar         9
+# ℹ 176 more rows</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 131   9</code></pre>
+<pre><code>[1] 528   9</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 9
   path                    index name  family style weight width italic monospace
   &lt;chr&gt;                   &lt;int&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt; &lt;ord&gt;  &lt;ord&gt; &lt;lgl&gt;  &lt;lgl&gt;    
-1 /usr/share/fonts/type1…     0 URWG… URW G… Book… normal norm… FALSE  FALSE    
-2 /usr/share/fonts/truet…     0 Lato… Lato   Thin… ultra… norm… TRUE   FALSE    
-3 /usr/share/fonts/truet…     0 Libe… Liber… Bold  bold   norm… FALSE  FALSE    
-4 /usr/share/fonts/truet…     0 Lato… Lato   Semi… semib… norm… TRUE   FALSE    
-5 /usr/share/fonts/type1…     0 Nimb… Nimbu… Bold… bold   norm… TRUE   TRUE     
-6 /usr/share/fonts/truet…     0 Libe… Liber… Bold  bold   norm… FALSE  TRUE     </code></pre>
+1 /System/Library/Fonts/…     1 Shre… Shree… Bold  bold   norm… FALSE  FALSE    
+2 /System/Library/Fonts/…     0 Acad… Acade… Plain normal norm… FALSE  FALSE    
+3 /System/Library/Fonts/…     0 Impa… Impact Regu… heavy  semi… FALSE  FALSE    
+4 /System/Library/Fonts/…     3 Kohi… Kohin… Bold  bold   norm… FALSE  FALSE    
+5 /System/Library/Fonts/…     5 Ping… PingF… Medi… medium norm… FALSE  FALSE    
+6 /System/Library/Fonts/…     2 Sukh… Sukhu… Text  normal norm… FALSE  FALSE    </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sort</span>(<span class="fu">unique</span>(df<span class="sc">$</span>family))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "C059"                   "D050000L"               "DejaVu Math TeX Gyre"  
- [4] "DejaVu Sans"            "DejaVu Sans Mono"       "DejaVu Serif"          
- [7] "Droid Sans Fallback"    "Lato"                   "Liberation Mono"       
-[10] "Liberation Sans"        "Liberation Sans Narrow" "Liberation Serif"      
-[13] "Nimbus Mono PS"         "Nimbus Roman"           "Nimbus Sans"           
-[16] "Nimbus Sans Narrow"     "Noto Color Emoji"       "Noto Mono"             
-[19] "Noto Sans Mono"         "P052"                   "Standard Symbols PS"   
-[22] "URW Bookman"            "URW Gothic"             "Z003"                  </code></pre>
+<pre><code>  [1] "Academy Engraved LET"      "Al Bayan"                 
+  [3] "Al Nile"                   "Al Tarikh"                
+  [5] "American Typewriter"       "Andale Mono"              
+  [7] "Apple Braille"             "Apple Chancery"           
+  [9] "Apple Color Emoji"         "Apple SD Gothic Neo"      
+ [11] "Apple Symbols"             "AppleGothic"              
+ [13] "AppleMyungjo"              "Arial"                    
+ [15] "Arial Black"               "Arial Hebrew"             
+ [17] "Arial Hebrew Scholar"      "Arial Narrow"             
+ [19] "Arial Rounded MT Bold"     "Arial Unicode MS"         
+ [21] "Avenir"                    "Avenir Next"              
+ [23] "Avenir Next Condensed"     "Ayuthaya"                 
+ [25] "Baghdad"                   "Bangla MN"                
+ [27] "Bangla Sangam MN"          "Baskerville"              
+ [29] "Beirut"                    "Big Caslon"               
+ [31] "Bodoni 72"                 "Bodoni 72 Oldstyle"       
+ [33] "Bodoni 72 Smallcaps"       "Bodoni Ornaments"         
+ [35] "Bradley Hand"              "Brush Script MT"          
+ [37] "Chalkboard"                "Chalkboard SE"            
+ [39] "Chalkduster"               "Charter"                  
+ [41] "Cochin"                    "Comic Sans MS"            
+ [43] "Copperplate"               "Corsiva Hebrew"           
+ [45] "Courier New"               "Damascus"                 
+ [47] "DecoType Naskh"            "Devanagari MT"            
+ [49] "Devanagari Sangam MN"      "Didot"                    
+ [51] "DIN Alternate"             "DIN Condensed"            
+ [53] "Diwan Kufi"                "Diwan Thuluth"            
+ [55] "Euphemia UCAS"             "Farah"                    
+ [57] "Farisi"                    "Futura"                   
+ [59] "Galvji"                    "GB18030 Bitmap"           
+ [61] "Geeza Pro"                 "Geneva"                   
+ [63] "Georgia"                   "Gill Sans"                
+ [65] "Grantha Sangam MN"         "Gujarati MT"              
+ [67] "Gujarati Sangam MN"        "Gurmukhi MN"              
+ [69] "Gurmukhi MT"               "Gurmukhi Sangam MN"       
+ [71] "Heiti SC"                  "Heiti TC"                 
+ [73] "Helvetica"                 "Helvetica Neue"           
+ [75] "Herculanum"                "Hiragino Maru Gothic ProN"
+ [77] "Hiragino Mincho ProN"      "Hiragino Sans"            
+ [79] "Hiragino Sans GB"          "Hoefler Text"             
+ [81] "Impact"                    "InaiMathi"                
+ [83] "ITF Devanagari"            "ITF Devanagari Marathi"   
+ [85] "Kailasa"                   "Kannada MN"               
+ [87] "Kannada Sangam MN"         "Kefa"                     
+ [89] "Khmer MN"                  "Khmer Sangam MN"          
+ [91] "Kohinoor Bangla"           "Kohinoor Devanagari"      
+ [93] "Kohinoor Gujarati"         "Kohinoor Telugu"          
+ [95] "Kokonor"                   "Krungthep"                
+ [97] "KufiStandardGK"            "Lao MN"                   
+ [99] "Lao Sangam MN"             "Lucida Grande"            
+[101] "Luminari"                  "Malayalam MN"             
+[103] "Malayalam Sangam MN"       "Marker Felt"              
+[105] "Menlo"                     "Microsoft Sans Serif"     
+[107] "Mishafi"                   "Mishafi Gold"             
+[109] "Monaco"                    "Mshtakan"                 
+[111] "Mukta Mahee"               "Muna"                     
+[113] "Myanmar MN"                "Myanmar Sangam MN"        
+[115] "Nadeem"                    "New Peninim MT"           
+[117] "Noteworthy"                "Noto Nastaliq Urdu"       
+[119] "Noto Sans Kannada"         "Noto Sans Myanmar"        
+[121] "Noto Sans Oriya"           "Noto Serif Myanmar"       
+[123] "Optima"                    "Oriya MN"                 
+[125] "Oriya Sangam MN"           "Palatino"                 
+[127] "Papyrus"                   "Party LET"                
+[129] "Phosphate"                 "PingFang HK"              
+[131] "PingFang SC"               "PingFang TC"              
+[133] "Plantagenet Cherokee"      "PT Mono"                  
+[135] "PT Sans"                   "PT Sans Caption"          
+[137] "PT Sans Narrow"            "PT Serif"                 
+[139] "PT Serif Caption"          "Raanana"                  
+[141] "Rockwell"                  "Sana"                     
+[143] "Sathu"                     "Savoye LET"               
+[145] "Shree Devanagari 714"      "SignPainter"              
+[147] "Silom"                     "Sinhala MN"               
+[149] "Sinhala Sangam MN"         "Skia"                     
+[151] "Snell Roundhand"           "Songti SC"                
+[153] "Songti TC"                 "STIXGeneral"              
+[155] "STIXIntegralsD"            "STIXIntegralsSm"          
+[157] "STIXIntegralsUp"           "STIXIntegralsUpD"         
+[159] "STIXIntegralsUpSm"         "STIXNonUnicode"           
+[161] "STIXSizeFiveSym"           "STIXSizeFourSym"          
+[163] "STIXSizeOneSym"            "STIXSizeThreeSym"         
+[165] "STIXSizeTwoSym"            "STIXVariants"             
+[167] "STSong"                    "Sukhumvit Set"            
+[169] "Symbol"                    "Tahoma"                   
+[171] "Tamil MN"                  "Tamil Sangam MN"          
+[173] "Telugu MN"                 "Telugu Sangam MN"         
+[175] "Thonburi"                  "Times New Roman"          
+[177] "Trattatello"               "Trebuchet MS"             
+[179] "Verdana"                   "Waseem"                   
+[181] "Webdings"                  "Wingdings"                
+[183] "Wingdings 2"               "Wingdings 3"              
+[185] "Zapf Dingbats"             "Zapfino"                  </code></pre>
 </div>
 </div>
 <div class="card border-primary mb-3" style="max-width: 20rem;">
