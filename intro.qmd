@@ -7,5 +7,5 @@ See @knuth84 for additional discussion of literate programming.
 ```{r}
 library(ggplot2)
 ggplot(iris, aes(Sepal.Width, Sepal.Length)) + geom_point() + ggtitle("Iris Dataset") +
-theme(plot.title = element_text(family = "Menlo"))
+theme(plot.title = element_text(family = "Marker Felt"))
 ```
